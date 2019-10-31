@@ -1,0 +1,21 @@
+<p>
+  son works!
+</p>
+
+My grandPa name is : {{grandPaName}}
+<br>
+
+
+<form [formGroup]="sonForm" (change)="onUpWithDataService()">
+  <label>nom</label>
+  <input formControlName="nom">
+  <label>prénom</label>
+  <input formControlName="prenom">
+  <label>mail</label>
+  <input formControlName="mail">
+
+  <button type="submit">Save</button>
+
+</form>
+<br>
+Son Form Value: {{sonForm.value | json}}

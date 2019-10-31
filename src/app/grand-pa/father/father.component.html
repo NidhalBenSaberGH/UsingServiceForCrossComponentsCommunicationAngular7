@@ -1,0 +1,25 @@
+<p>
+  father works!
+</p>
+
+My Father name: {{fatherName}} <br>
+<br>
+
+
+<form [formGroup]="sonForm" (change)="onShareWithDataService()">
+  <label>nom</label>
+  <input formControlName="nom" [value]="sonForm.get('nom').value ">
+  <label>prénom</label>
+  <input formControlName="prenom" [value]="sonForm.get('prenom').value">
+  <label>mail</label>
+  <input formControlName="mail" [value]="sonForm.get('mail').value ">
+
+  <button type="submit">Save</button>
+
+</form>
+<br>
+Parent form value: {{sonForm.value | json}}
+<app-son></app-son>
+
+
+
